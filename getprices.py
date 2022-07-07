@@ -7,5 +7,4 @@ def getprice(ticker, exchange):
     soup = BeautifulSoup (r.content, 'lxml')
     price = str((soup.find(class_="YMlKec fxKbKc")))
     return (float((price.replace('<div class="YMlKec fxKbKc">$','').replace('</div>',''))))
-#formato:getprice('ticker','exchange')
-print (getprice('TSLA','NASDAQ'))
+#syntaxis:getprice('ticker','exchange')
